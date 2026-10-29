@@ -1,0 +1,24 @@
+{
+    "version": "0.6.1",
+    "description": "Finds the package managers on your system and keeps them up to date",
+    "homepage": "https://repoke.paveldelpozo.es",
+    "license": "MIT|Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/paveldelpozo/repoke/releases/download/v0.6.1/repoke-x86_64-pc-windows-gnu.zip",
+            "hash": "66a015e173c81e1e9b829d3171feecb7591843cbc600fd412000b12ad936707f"
+        }
+    },
+    "bin": "repoke.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/paveldelpozo/repoke/releases/download/v$version/repoke-x86_64-pc-windows-gnu.zip",
+                "hash": {
+                    "url": "$url.sha256"
+                }
+            }
+        }
+    }
+}
